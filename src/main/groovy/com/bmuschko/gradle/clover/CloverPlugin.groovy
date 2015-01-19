@@ -270,6 +270,8 @@ class CloverPlugin implements Plugin<Project> {
      * @return License file
      */
     private File getLicenseFile(Project project, CloverPluginConvention cloverPluginConvention) {
+        System.out.println('------------- LICENSE LOCATION ------------------');
+        System.out.println(cloverPluginConvention.licenseLocation)
         LicenseResolverFactory.instance.getResolver(cloverPluginConvention.licenseLocation).resolve(project.rootDir, cloverPluginConvention.licenseLocation)
     }
 
